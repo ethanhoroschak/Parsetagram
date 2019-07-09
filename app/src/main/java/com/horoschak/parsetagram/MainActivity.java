@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.bSignup) Button bSignup;
     // Request codes
     private final static int REQUEST_CODE = 20;
-    private final static int PICK_PHOTO_CODE = 1046;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
