@@ -178,7 +178,9 @@ public class NewUserSetUp extends AppCompatActivity {
         // TODO have user select or take photo
         //final File file = new File("/storage/emulated/0/DCIM/Camera/IMG_20190708_153100.jpg")
         // save first
-        parseFile.saveInBackground();
+        if (parseFile != null) {
+            parseFile.saveInBackground();
+        }
         // TODO runtime persmissions for file
         requestPerms();
         updateUser(handle, bio, parseFile);
