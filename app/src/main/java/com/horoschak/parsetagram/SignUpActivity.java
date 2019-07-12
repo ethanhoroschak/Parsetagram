@@ -29,8 +29,6 @@ public class SignUpActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         ButterKnife.bind(this);
-
-
     }
 
     @OnClick(R.id.bCreateAccount)
@@ -42,6 +40,8 @@ public class SignUpActivity extends AppCompatActivity {
         user.setPassword(etPassword.getText().toString());
         user.setEmail(etEmail.getText().toString());
         user.put("handle", etUsername.getText().toString());
+        user.put("bio", "Hello!");
+        user.put("posts", 0);
         // Set custom properties
         //user.put("phone", "650-253-0000");
         // Invoke signUpInBackground
@@ -50,14 +50,14 @@ public class SignUpActivity extends AppCompatActivity {
             public void done(ParseException e) {
                 if (e == null) {
                     Log.d("SignUpActivity", "Sign Up successful");
-                    final Intent intent = new Intent(SignUpActivity.this, HomeActivity.class);
+                    final Intent intent = new Intent(SignUpActivity.this, NewUserSetUp.class);
                     startActivity(intent);
                     setResult(RESULT_OK);
                     finish();
                 } else {
-                    Log.d("SignUpActivity", "Sign Up successful");
+                    Log.d("SignUpActivity", "Sign Up unsuccessful");
                     e.printStackTrace();
-                    Toast.makeText(SignUpActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         });

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Log.e("LoginActivity", "Login unsuccessful");
                     e.printStackTrace();
+                    Toast.makeText(MainActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
                 }
             }
         });

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewUserSetUp">
+
+    <ImageView
+        android:id="@+id/ivProfileImage"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvChangeText"
+        app:srcCompat="@mipmap/instagram_user_outline_24" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:baselineAlignBottom="false"
+            android:foregroundGravity="center"
+            android:text="Edit Profile"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar2"
+            app:layout_constraintStart_toStartOf="@+id/toolbar2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <View
+        android:id="@+id/border"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCCCC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <View
+        android:id="@+id/borderbelow"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCCCC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bCamera" />
+
+    <ImageButton
+        android:id="@+id/bCamera"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/verticalborder"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfileImage"
+        app:srcCompat="@drawable/ic_camera" />
+
+    <ImageButton
+        android:id="@+id/bPhotos"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toEndOf="@+id/verticalborder"
+        app:layout_constraintTop_toTopOf="@+id/bCamera"
+        app:srcCompat="@drawable/ic_photos" />
+
+    <TextView
+        android:id="@+id/tvChangeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Change Profile Photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <View
+        android:id="@+id/verticalborder"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="#CCCCCCCC"
+        app:layout_constraintBottom_toBottomOf="@+id/bPhotos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivProfileImage" />
+
+    <TextView
+        android:id="@+id/tvNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="38dp"
+        android:text="Name"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verticalborder" />
+
+    <TextView
+        android:id="@+id/tvBio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:text="Bio"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNameText" />
+
+    <EditText
+        android:id="@+id/etHandle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvNameText"
+        app:layout_constraintTop_toBottomOf="@+id/borderbelow" />
+
+    <EditText
+        android:id="@+id/etBio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Biography"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/etHandle"
+        app:layout_constraintTop_toBottomOf="@+id/etHandle" />
+
+    <Button
+        android:id="@+id/bDone"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_profile_back"
+        android:text="Done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

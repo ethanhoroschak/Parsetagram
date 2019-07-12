@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_conversion_absoluteWidth="411dp" >
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvUser2"
+                app:layout_constraintTop_toTopOf="@+id/tvUser2" />
+
+            <ImageButton
+                android:id="@+id/ibShare"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="16dp"
+                android:background="#00FFFFFF"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvUser"
+                app:srcCompat="@drawable/ic_more" />
+
+            <ImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/instagram_user_outline_24" />
+
+            <ImageView
+                android:id="@+id/ivLike"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivImage"
+                app:srcCompat="@drawable/ufi_heart" />
+
+            <TextView
+                android:id="@+id/tvUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/ivProfileImage"
+                app:layout_constraintTop_toTopOf="@+id/ivProfileImage" />
+
+            <ImageView
+                android:id="@+id/ivComment"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="24dp"
+                app:layout_constraintStart_toEndOf="@+id/ivLike"
+                app:layout_constraintTop_toTopOf="@+id/ivLike"
+                app:srcCompat="@drawable/ufi_comment" />
+
+            <View
+                android:id="@+id/border"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#CCCCCCCC"
+                app:layout_constraintBottom_toTopOf="@+id/ivImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="0dp"
+                android:layout_height="400dp"
+                android:layout_marginTop="16dp"
+                android:adjustViewBounds="false"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivProfileImage"
+                tools:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:paddingBottom="4dp"
+                android:text="12m"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/ibShare"
+                app:layout_constraintTop_toTopOf="@+id/ibShare" />
+
+            <ImageView
+                android:id="@+id/ivSave"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivMessage"
+                app:srcCompat="@drawable/ufi_save_icon" />
+
+            <ImageView
+                android:id="@+id/ivMessage"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="24dp"
+                app:layout_constraintStart_toEndOf="@+id/ivComment"
+                app:layout_constraintTop_toTopOf="@+id/ivLike"
+                app:srcCompat="@mipmap/direct" />
+
+            <TextView
+                android:id="@+id/tvUser2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tvLikeCount"
+                app:layout_constraintTop_toBottomOf="@+id/tvLikeCount" />
+
+            <TextView
+                android:id="@+id/tvLikeCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/ivLike"
+                app:layout_constraintTop_toBottomOf="@+id/ivLike" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
